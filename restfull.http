@@ -1,0 +1,50 @@
+@URL = http://localhost:3016/
+
+GET {{ URL }}
+
+###
+GET http://localhost:3016/99
+
+###
+POST http://localhost:3016
+Content-Type: application/json
+
+{
+    "name":"eren",
+    "age":22
+}
+
+###
+POST http://localhost:3016
+Content-Type: application/x-www-form-urlencoded
+
+name=eren&age=22
+
+###
+
+GET http://localhost:3016/api/users
+
+###
+GET http://localhost:3016/api/users/61e73ecc2ff27464e6caa49e
+
+###
+POST http://localhost:3016/api/users
+Content-Type: application/json
+
+{
+    "name": "ayse",
+    "age":   24,
+    "email": "ayse@hotmail.com",
+    "password": "123123"
+}
+
+###
+PATCH  http://localhost:3016/api/users/61e94dd8091e9757d3bb01d2
+Content-Type: application/json
+
+{
+    "name": "ayse2"
+}
+
+###
+DELETE  http://localhost:3016/api/users/61e94dd8091e9757d3bb01d2
